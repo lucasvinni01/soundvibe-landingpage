@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "Mexa";
+    src: url("./font/MexaRegular.otf"), url("./font/MexaRegular.ttf");
+}
+@font-face {
+    font-family: "Exot350";
+    src: url("font/EXOT350L.TTF") format('truetype'), url("font/EXO350DB.TTF") format('truetype');
+}
+:root {
+    --lightBlue: #39F6FF;
+    --blue: #22B5FF;
+    --darkBlue: #1a2350;
+    --purple: #4848EF;
+    --white: #daddde;
+    --black: #00090a;
+    --fontDisplay: "Exot350", Arial, sans-serif;
+    --fontText: "Segoi UI", arial, sans-serif;
+    --fontAlternative: "Mexa", arial, sans-serif;
+    --highSpacing: 1em;
+    --spacing: .7em;
+    --lowSpacing: .4em;
+}
+
+body {
+    color: var(--white);
+}
+
+.header_container {
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--highSpacing);
+    align-items: center;
+}
+
+.header_link-home {
+    width: 25%;
+}
+
+.header_logo {
+    width: 10%;
+}
+
+.header_link-signin, .header_link-login {
+    color: var(--white);
+    font: bold 1em var(--fontText);
+    text-decoration: none;
+}
+
+.header_link-signin:hover {
+    text-decoration: underline;
+}
+
+.header_link-login {
+    padding: 0 5px;
+    border: 2px solid var(--blue);
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px 1px var(--purple);
+}
+
+.header_link-login:hover {
+    box-shadow: 0px 0px 5px 3px var(--purple);
+}
+
+/* Principal */
+.principal_container {
+    height: 100vh;
+    background-color: var(--black);
+    display: flex;
+    background-image: url("./assets/gm-soundvibe2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 250%;
+}
+
+.principal_infos {
+    padding: 0 50px;
+}
+
+.principal_titulo {
+    font: bold 4em var(--fontDisplay);
+    color: var(--blue);
+    margin-bottom: var(--lowSpacing);
+    line-height: var(--spacing);
+}
+
+#principal_titulo-init {
+    margin-top: calc(4*var(--highSpacing));
+}
+
+.principal_span-highlight {
+    color: var(--lightBlue);
+    font: normal .6em var(--fontAlternative);
+}
+
+.principal_chamada {
+    font-family: var(--fontText);
+    font-weight: bold;
+    font-size: var(--highSpacing);
+
+}
+
+.principal_image > img {
+    width: 70%;
+    position: relative;
+    top: 350px;
+    left: 150px;
+}
+
+/* planos */
+
+.planos_container {
+    height: 100vh;
+    background-color: var(--black);
+    padding: 0 50px;
+}
+
+.planos_card-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#principal_titulo-planos {
+    margin-bottom: calc(var(--highSpacing)*2);
+}
+
+.planos_card {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--highSpacing)*2);
+    border: 3px solid grey;
+    border-radius: 7px;
+    width: 20%;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.planos_card:hover {
+    box-shadow: 0px 0px 7px var(--white);
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+#planos_card-promo {
+    border: 3px solid var(--lightBlue);
+    box-shadow: 0px 0px 7px 2px var(--purple) inset, 0px 0px 15px 2px var(--purple);
+}
+
+#planos_card-promo:hover {
+    background-image: linear-gradient(var(--lightBlue), var(--blue), var(--darkBlue));
+    color: var(--black);
+}
+
+.planos-titulo {
+    font: bold 1.5em var(--fontText);
+    text-align: center;
+    border-bottom: 2px solid var(--darkBlue);
+}
+
+.planos-info {
+    font: bold 1.2em var(--fontDisplay);
+}
+
+.plano-descrip {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fontText);
+    text-align: center;
+    gap: var(--lowSpacing);
+}
+
+.planos-digito {
+    font: bold 3em var(--fontAlternative);
+    text-shadow: 0px 0px 7px var(--blue);
+}
+
+.planos-moeda {
+    font: bold 10px inherit;
+    position: relative;
+    top: -5px;
+    color: var(--purple);
+}
+
+/* Dispositivos */
+.dispositivos_container {
+    height: 90vh;
+    background-color: var(--black);
+}
+
+.dispositivo_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: calc(3*var(--highSpacing)) 0 var(--highSpacing);
+}
+
+.dispositivo_info {
+    padding-top: var(--spacing);
+    color: var(--white);
+    font: bold 1em var(--fontText);
+    text-align: center;
+}
+
+.dispositivo_imagem {
+    width: 150px;
+    height: 150px;
+}
+
+/* Sign in */
+.signin_container {
+    height: 90vh;
+    background-image: linear-gradient(var(--black) 80%, #1a2350);
+    background: url("./assets/gm-soundvibe1mdpi.png");
+    background-color: var(--black);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.signin_chamada {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--lowSpacing);
+}
+
+.signin_chamada-titulo {
+    font: bold 2em var(--fontDisplay);
+}
+
+.signin_btn-promo {
+    margin: auto;
+    width: 200px;
+    padding: 20px 45px;
+    background-image: linear-gradient(120deg, var(--lightBlue),  var(--blue));
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--black);
+    font: bold 2em var(--fontAlternative);
+}
+
+.signin_btn-promo:hover {
+    background-image: linear-gradient(120deg, var(--blue), var(--lightBlue) 60%,  #98faff, var(--blue) 99%);
+    box-shadow: 0px 0px 10px 2px var(--lightBlue);
+    transform: scale(1.15);
+    transition: 1s;
+}
+
+.signin_btn-atuais {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--fontText);
+}
+
+.signin_btn-atuais:hover {
+    text-decoration: underline;
+}
+
+.signin_image {
+   background-image: url("assets/woman_music-fb.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 54%;
+   width: 54%;
+   float: inline-end;
+   margin: auto;
+}
